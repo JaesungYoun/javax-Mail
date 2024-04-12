@@ -13,8 +13,8 @@ public class MailService {
 
     public void sendMail(SendMailRequest request) {
         // 발신자의 네이버 이메일과 비밀번호를 설정
-        final String username = "jayjoy05@naver.com"; // 네이버 이메일 주소
-        final String password = "tjdrhdgkwk"; // 네이버 이메일 비밀번호
+        final String username = "username@naver.com"; // 네이버 이메일 주소
+        final String password = "password"; // 네이버 이메일 비밀번호
 
         String title = request.getTitle();
         String content = request.getContent();
@@ -38,8 +38,8 @@ public class MailService {
         try {
             // 메시지를 생성합니다.
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("jayjoy05@naver.com")); // 발신자 이메일 주소
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("wotjdwotjd11@gmail.com")); // 수신자 이메일 주소
+            message.setFrom(new InternetAddress("username@naver.com")); // 발신자 이메일 주소
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("recipient@gmail.com")); // 수신자 이메일 주소
             message.setSubject(title); // 메일 제목
             message.setText(content); // 메일 본문
 
