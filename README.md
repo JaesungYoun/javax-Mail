@@ -68,7 +68,7 @@ public class MailService {
 }
 ```
 
-### 3. Controller를 작성하여 2에서 만든 Service를 호출해주주도록 한다.
+### 3. Controller를 작성하여 2에서 만든 Service를 호출해주도록 한다.
 
 ```java
 import lombok.RequiredArgsConstructor;
